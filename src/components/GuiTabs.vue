@@ -43,7 +43,7 @@
         }"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512.001 512.001"
-        @click="removeTab($event, tab)"
+        @click="removeTab(tab)"
       >
         <path
           fill="#333"
@@ -262,7 +262,7 @@ export default {
       this.createTab(title, shouldBeActive)
     },
 
-    removeTab (e, tab) {
+    removeTab (tab) {
       const index = this.tabs.indexOf(tab)
       this.tabs.splice(index, 1)
       this.setActiveByIndex(index)
