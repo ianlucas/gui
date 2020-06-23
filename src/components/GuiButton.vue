@@ -21,27 +21,20 @@
 
 .gui-button:focus {
   border-color: #2a73b9;
-  box-shadow: 0 0 0 1px #2a73b9 inset;
+  box-shadow: 0 0 0 1px #cce4f7 inset;
   position: relative;
   transition: none;
   outline: none;
-}
-
-.gui-button:focus:after {
-  border: 1px dotted #333;
-  content: '';
-  display: block;
-  height: calc(100% - 4px);
-  left: 1px;
-  position: absolute;
-  top: 1px;
-  width: calc(100% - 4px);
 }
 
 .gui-button:hover {
   border-color: #2a73b9;
   background-color: #e5f1fB;
   box-shadow: none;
+}
+
+.gui-button:active {
+  background-color: #cce4f7;
 }
 
 .gui-button:disabled {
