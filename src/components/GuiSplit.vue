@@ -58,7 +58,10 @@ export default {
       sizes,
       minSizes,
       direction: 'vertical',
-      gutterSize: this.gutterSize
+      gutterSize: this.gutterSize,
+      onDrag: () => {
+        this.$emit('drag')
+      }
     })
   }
 }
