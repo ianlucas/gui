@@ -13,8 +13,11 @@
             placeholder="Ambiente"
           />
           <GuiButton>
-            Executar
+            💾 Executar
           </GuiButton>
+          <GuiLabel>
+            ⚠️ Check your connection!
+          </GuiLabel>
         </GuiToolbar>
       </GuiPanel>
       <GuiPanel :size="70">
@@ -38,6 +41,7 @@ import GuiSelect from './components/GuiSelect'
 import GuiButton from './components/GuiButton'
 import GuiPanel from './components/GuiPanel'
 import GuiSplit from './components/GuiSplit'
+import GuiLabel from './components/GuiLabel'
 
 export default {
   components: {
@@ -47,7 +51,8 @@ export default {
     GuiSelect,
     GuiButton,
     GuiPanel,
-    GuiSplit
+    GuiSplit,
+    GuiLabel
   },
 
   data: () => ({
