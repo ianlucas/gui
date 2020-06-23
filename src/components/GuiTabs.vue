@@ -20,6 +20,7 @@
       }"
       draggable="true"
       @mousedown.left="handleMousedown(tab)"
+      @mousedown.middle="removeTab(tab, false)"
       @drag="handleDrag(tab)"
       @dragend="handleDragend"
       @dragover="handleDragover($event, tab)"
@@ -165,6 +166,7 @@ export default {
         title: title || this.l10n.newTab
       }
       this.tabs.push(tab)
+      this.$emit('add', tab)
       if (shouldBeActive) {
         this.setActiveTab(tab)
       }
@@ -175,7 +177,7 @@ export default {
     },
 
     setActiveTab (tab) {
-      if (tab.isRemoved) {
+      if (!tab) {
         return
       }
       this.activeTab = tab
@@ -262,10 +264,13 @@ export default {
       this.createTab(title, shouldBeActive)
     },
 
-    removeTab (tab) {
+    removeTab (tab, shouldSetActive = true) {
+      this.$emit('remove', tab)
       const index = this.tabs.indexOf(tab)
       this.tabs.splice(index, 1)
-      this.setActiveByIndex(index)
+      if (shouldSetActive) {
+        this.setActiveByIndex(index)
+      }
     }
   }
 }
