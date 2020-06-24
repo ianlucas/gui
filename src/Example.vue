@@ -3,7 +3,7 @@
     <GuiTabs />
     <GuiSplit
       class="app-main"
-      size="calc(100% - 70px)"
+      size="calc(100% - 40px)"
     >
       <GuiPanel :size="30">
         <GuiToolbar>
@@ -20,8 +20,12 @@
           </GuiLabel>
         </GuiToolbar>
       </GuiPanel>
-      <GuiPanel :size="70">
-        Sou outro painel
+      <GuiPanel
+        :size="70"
+        :scrollable="true"
+      >
+        <img style="opacity: 0;" src="https://santacruzsolar.com.br/wp-content/uploads/2016/12/hd-beach-wallpapers-1080p.jpg" />
+        <img style="opacity: 0;" src="https://santacruzsolar.com.br/wp-content/uploads/2016/12/hd-beach-wallpapers-1080p.jpg" />
       </GuiPanel>
     </GuiSplit>
   </GuiFullscreen>
