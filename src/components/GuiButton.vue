@@ -14,7 +14,7 @@
   background-color: transparent;
   box-shadow: 0 0 0 1px transparent inset;
   min-width: 81px;
-  padding: 3px 0;
+  padding: 3px 5px;
   text-align: center;
   transition: all ease 300ms;
 }
