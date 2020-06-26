@@ -21,11 +21,11 @@
         </GuiToolbar>
       </GuiPanel>
       <GuiPanel
+        class="scrollable"
         :size="70"
-        :scrollable="true"
       >
-        <img style="opacity: 0;" src="https://santacruzsolar.com.br/wp-content/uploads/2016/12/hd-beach-wallpapers-1080p.jpg" />
-        <img style="opacity: 0;" src="https://santacruzsolar.com.br/wp-content/uploads/2016/12/hd-beach-wallpapers-1080p.jpg" />
+        <img style="opacity: 0; width: 1920px; height: 1080px" src="https://i0.wp.com/www.farofeiros.com.br/wp-content/uploads/2017/01/Gabe-Newell-da-Steam-e1486861864816.jpg" />
+        <img style="opacity: 0; width: 1920px; height: 1080px" src="https://i0.wp.com/www.farofeiros.com.br/wp-content/uploads/2017/01/Gabe-Newell-da-Steam-e1486861864816.jpg" />
       </GuiPanel>
     </GuiSplit>
   </GuiFullscreen>
@@ -34,6 +34,10 @@
 <style>
 .app-main .gutter {
   background-color: #f1f1f1;
+}
+
+.scrollable {
+  overflow: scroll;
 }
 </style>
 
