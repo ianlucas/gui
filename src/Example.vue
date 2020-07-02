@@ -24,8 +24,8 @@
         class="scrollable"
         :size="70"
       >
-        <img style="opacity: 0; width: 1920px; height: 1080px" src="https://i0.wp.com/www.farofeiros.com.br/wp-content/uploads/2017/01/Gabe-Newell-da-Steam-e1486861864816.jpg" />
-        <img style="opacity: 0; width: 1920px; height: 1080px" src="https://i0.wp.com/www.farofeiros.com.br/wp-content/uploads/2017/01/Gabe-Newell-da-Steam-e1486861864816.jpg" />
+        <GuiSearch v-model="isSearchVisible" />
+        Some text in this panel.
       </GuiPanel>
     </GuiSplit>
   </GuiFullscreen>
@@ -37,7 +37,7 @@
 }
 
 .scrollable {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 </style>
 
@@ -50,6 +50,7 @@ import GuiButton from './components/GuiButton'
 import GuiPanel from './components/GuiPanel'
 import GuiSplit from './components/GuiSplit'
 import GuiLabel from './components/GuiLabel'
+import GuiSearch from './components/GuiSearch'
 
 export default {
   components: {
@@ -60,7 +61,8 @@ export default {
     GuiButton,
     GuiPanel,
     GuiSplit,
-    GuiLabel
+    GuiLabel,
+    GuiSearch
   },
 
   data: () => ({
@@ -74,7 +76,8 @@ export default {
         label: 'Homologação',
         value: 'HML'
       }
-    ]
+    ],
+    isSearchVisible: true
   })
 }
 </script>
